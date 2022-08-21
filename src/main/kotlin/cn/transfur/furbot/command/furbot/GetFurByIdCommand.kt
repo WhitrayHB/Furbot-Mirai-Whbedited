@@ -18,7 +18,7 @@ object GetFurByIdCommand : GetFurCommand(
 
     @Handler
     suspend fun CommandSenderOnMessage<*>.run() = runBoth { target, sender ->
-        val id = sender.ask("你想找 id 是什么的图片？") ?: return@runBoth
+        val id = sender.ask("你想找的图片id是？") ?: return@runBoth
         respond(target, id)
     }
 
@@ -29,15 +29,14 @@ object GetFurByIdCommand : GetFurCommand(
         val furPic = get(id)
 
         if (furPic == null) {
-            target.sendMessage("这只毛毛还没有被收录，请联系开发者添加哦~")
+            target.sendMessage("这只毛毛还没有被收录，请联系绒狸API开发者添加")
         } else {
             target.sendMessage {
                 // Result text
                 add("""
-                    --- 每日吸毛 Bot ---
+                    --- 鸽子的吸毛 Bot ---
                     ID：${furPic.cid ?: furPic.fid}
                     毛毛名字：${furPic.name}
-                    搜索方法：按 ID 查找
                 """.trimIndent())
 
                 // Image

@@ -24,11 +24,10 @@ object GetFurRandCommand : GetFurCommand(
         target.sendMessage {
             // Result text
             add("""
-                --- 每日吸毛 Bot ---
-                今天你吸毛了嘛？
+                --- 鸽子的吸毛 Bot ---
+                今天也记得吸毛了呢~
                 ID：${furPic.cid ?: furPic.fid}
                 毛毛名字：${furPic.name}
-                搜索方法：全局随机
             """.trimIndent())
 
             // Image

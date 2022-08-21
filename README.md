@@ -71,3 +71,4 @@ api/v2/getFursuitFid:
   命令: 查fid
   参数: name（须编码）
 ```
+### 本仓库为WhitrayHB自用插件仓库

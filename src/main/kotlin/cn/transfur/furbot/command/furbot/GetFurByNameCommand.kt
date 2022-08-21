@@ -2,6 +2,7 @@ package cn.transfur.furbot.command.furbot
 
 import cn.transfur.furbot.command.FriendAccessCommand
 import cn.transfur.furbot.command.SessionCommand
+import cn.transfur.furbot.command.furbot.GetFidsByNameCommand.addTail
 import cn.transfur.furbot.data.FurPic
 import cn.transfur.furbot.util.sendMessage
 import net.mamoe.mirai.console.command.CommandSenderOnMessage
@@ -37,7 +38,7 @@ object GetFurByNameCommand : GetFurCommand(
         val furPic = get(name)
 
         if (furPic == null) {
-            target.sendMessage("这只毛毛还没有被收录，请联系开发者添加哦~")
+            target.sendMessage("这只毛毛还没有被收录，请联系绒狸API开发者添加哦~")
         } else {
             target.sendMessage {
                 // Result text
@@ -71,7 +72,10 @@ object GetFurByNameCommand : GetFurCommand(
             addImage(target, "https://cdn.furryfan.cn/bot/avatar.png")
 
             // T`gi
-            addTail("--- root@FurryAir ---")
+            add("---- root@FurryAir ----\n")
+            add("java.lang.SocketException:Connection suspended!\n")
+            add("    at ...\n")
+            addTail("whitrayhb@ServerHB:~$")
         }
     }
 }

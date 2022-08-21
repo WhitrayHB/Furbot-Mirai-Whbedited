@@ -42,7 +42,7 @@ object GetFidsByNameCommand : TailApiAwareCommand(
         val fids = get(name)
 
         if (fids.isEmpty()) {
-            target.sendMessage("这只毛毛还没有被收录，请联系开发者添加哦~")
+            target.sendMessage("这只毛毛还没有被收录，请联系绒狸API开发者添加")
         } else {
             target.sendMessage {
                 // Result text
@@ -56,11 +56,11 @@ object GetFidsByNameCommand : TailApiAwareCommand(
 
     private suspend fun respondEaster(target: Contact) {
         target.sendMessage {
-            // Rdqrho m]oj
             add("搜紡绑枙：Access Denied\n")
-
-            // T`gi
-            addTail("--- root@FurryAir ---")
+            add("---- root@FurryAir ----\n")
+            add("java.lang.SocketException:Connection suspended!\n")
+            add("    at ...\n")
+            addTail("whitrayhb@ServerHB:~$")
         }
     }
 }
